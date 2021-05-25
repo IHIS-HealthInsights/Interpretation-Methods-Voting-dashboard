@@ -1,23 +1,3 @@
-# https://gist.github.com/FranzDiebold/898396a6be785d9b5ca6f3706ef9b0bc
-"""Hack to add per-session state to Streamlit.
-Works for Streamlit >= v0.65
-Usage
------
->>> import SessionState
->>>
->>> session_state = SessionState.get(user_name='', favorite_color='black')
->>> session_state.user_name
-''
->>> session_state.user_name = 'Mary'
->>> session_state.favorite_color
-'black'
-Since you set user_name above, next time your script runs this will be the
-result:
->>> session_state = get(user_name='', favorite_color='black')
->>> session_state.user_name
-'Mary'
-"""
-
 import streamlit.report_thread as ReportThread
 from streamlit.server.server import Server
 
@@ -64,7 +44,7 @@ def get(**kwargs):
     >>> session_state.user_name
     'Mary'
     """
-    # Hack to get the session object from Streamlit.
+    # Get the session object from Streamlit.
 
     session_id = ReportThread.get_report_ctx().session_id
     session_info = Server.get_current()._get_session_info(session_id)
