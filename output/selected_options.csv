@@ -1,0 +1,4 @@
+selected_image,Method A,Method B,Method C,Method D,None,timestamp
+1.jpg,True,False,True,False,False,2021-05-25 16:30:19.244076
+2.jpg,False,True,False,False,False,2021-05-25 16:30:31.908224
+1.jpg,False,False,False,False,True,2021-05-25 16:30:40.515512
